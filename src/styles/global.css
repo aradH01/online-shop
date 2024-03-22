@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    background: #FCFCFC !important;
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden scroll;
+}
+
+body,
+p {
+    margin: 0;
+}
