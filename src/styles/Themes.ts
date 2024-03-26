@@ -22,7 +22,7 @@ const light = {
     font: {
         white: '#FCFCFC',
         black: '#000',
-        primary: '#1D1D1F',
+        primary: '#184D47',
         grayMedium: '#6E6E73',
         grayLight: '#E2E2E4',
         currentColor: 'currentColor',

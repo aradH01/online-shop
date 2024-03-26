@@ -63,3 +63,19 @@ export interface TextareaProps
     label?: string;
     error?: string;
 }
+export interface ImagesLabelProps {
+    title: string,
+    className?: string
+}
+export interface SearchBoxProps {
+    className?: string
+    id?: string
+    error?: string
+    type?: string
+    placeholder?: string
+    label?: string
+    onChange?: (e: any) => void
+    onClick?: () => void
+    onBlur?: () => void
+    onFocus?: () => void
+}

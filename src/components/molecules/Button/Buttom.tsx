@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 import React from "react";
-import {LoadingCircle} from "@/components/atoms/LoadingCircle";
 import {Themes} from "@/styles/Themes";
 import {getSize} from "@/styles/globals";
 import {ButtonProps} from "@/types/components-types";
 import {Typography} from "@/components/atoms/Typography";
 import {Icon} from "@/components/atoms/Icon";
 import {addClass} from "@/utils/classNames";
+import {LoadingCircle} from "@/components/atoms/LoadingCircle/LoadingCircle";
 
 export const StyledButton = styled.button<StyledButtonType>`
   border: 0;
