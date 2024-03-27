@@ -131,7 +131,7 @@ export const Topbar = () => {
             <header
                 data-theme={theme}
                 className={
-                    "z-[100] data-[theme='Header']:h-[6.25rem] data-[theme='SubHeader']:h-[5.31rem] md:h-[13.4rem] w-full bg-[#FCFCFC] transition-all sticky top-0 data-[theme='SubHeader']:shadow-[0_0_28px_11px_#ababab4a]"
+                    "z-[10000] data-[theme='Header']:h-[6.25rem] data-[theme='SubHeader']:h-[5.31rem] md:h-[13.4rem] w-full bg-[#FCFCFC] transition-all sticky top-0 data-[theme='SubHeader']:shadow-[0_0_28px_11px_#ababab4a]"
                 }
             >
                 {theme === "Header" ?
@@ -254,12 +254,10 @@ export const Topbar = () => {
                             </div>
                         </Link>
                         <div className="flex flex-row-reverse items-center justify-center">
-
-                            <div
-                                className="flex justify-end ">
-                                <Button text title="Go up" icon="UpArrow" className="[&>div>svg>path]:!stroke-black [&>div>svg>path]:animate-bounce [&>div>svg>path]:!fill-black"
-                                        onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}/>
+                            <div>
+                                <HeaderDropdown title="Arad haghighy" data={profileData}/>
                             </div>
+
                         </div>
                         <Image src={LightMenu} alt="Menu" className="lt:hidden block xsm:mr-6 mr-4 w-[35px]"
                                onClick={() => setSidebar(!sidebar)}/>

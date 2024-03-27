@@ -19,6 +19,7 @@ export interface ButtonProps {
     text?: boolean,
     icon?: AvailableIcons,
     arrow?:boolean
+    animate?:boolean
     onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 

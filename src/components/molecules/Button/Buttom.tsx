@@ -165,6 +165,7 @@ export const Button: React.FC<ButtonProps> = ({
                                                   type,
                                                   linked,
     arrow,
+    animate,
                                                   ...props
                                               }) => {
     return (
@@ -185,7 +186,7 @@ export const Button: React.FC<ButtonProps> = ({
                 /> : ''}
             <div className="flex items-center overflow-auto flex-row-reverse gap-[10px]">
                 <Icon name={icon || 'Empty'}
-                      className={addClass( "w-[18px] h-[18px]")}/>
+                      className={addClass( animate ? "animate-bounce" : '' , "w-[18px] h-[18px]")}/>
                 <Typography.Text size="xsm" weight="normal"
                                  color={(outlined || text) ? "primary" : "white"}>{loading ? "" : title}</Typography.Text>
                 {

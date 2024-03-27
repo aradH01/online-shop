@@ -13,11 +13,19 @@ const config: Config = {
         'gradient-conic':
             'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      backgroundColor:{
+        lightPrimary: "#16625b",
+      },
       fontFamily: ({fontFamily}: any) => ({
         ...fontFamily,
         montserrat: ['var(--montserrat-font)'],
         OpenSans: ['var(--OpenSans-font)'],
       }),
+      colors:{
+        app:{
+          lightPrimary: "#16625b",
+        }
+      },
       screens: {
         mm: '275px',
         base: '370px',

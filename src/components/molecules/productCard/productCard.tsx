@@ -7,6 +7,7 @@ import styled from "@emotion/styled";
 import {Button} from "@/components/molecules/Button/Buttom";
 import {useState} from "react";
 import {Icon} from "@/components/atoms/Icon";
+import {addClass} from "@/utils/classNames";
 
 const StyledButton = styled.button`
   border: 0;
@@ -47,7 +48,7 @@ const ActionButton = styled.button`
 `
 export default function ProductCard() {
     return (
-        <div className="flex gap-12 justify-center my-[200px]">
+        <div className="flex gap-12 justify-center mt-[200px]">
             <CardOne/>
             <CardTwo/>
         </div>
@@ -88,24 +89,25 @@ function CardOne() {
 
 function CardTwo() {
     const [count, setCount] = useState<number>(1);
-
+    const [liked, setLiked] = useState<boolean>(false)
     return (
         <div className="bg-[#16625b] pb-4 max-w-[450px] rounded-[35px]">
             <div className="h-[500px] relative">
                 <div className="right-0 bg-[#184D47] rounded-tr-[35px] h-[370px] w-[90%] absolute rounded-bl-[55px]">
                     <div
-                        className="flex flex-col bg-white rounded-[15px] w-fit items-center bottom-0 -translate-y-[80%] translate-x-[-50%] left-0 absolute">
+                        className="flex overflow-hidden flex-col bg-white rounded-[15px] w-fit items-center bottom-0 -translate-y-[80%] translate-x-[-50%] left-0 absolute">
                         <ActionButton onClick={() => setCount(prevState => prevState + 1)}>
                             <Typography.Paragraph size="sm" weight="semiBold" color="black">+</Typography.Paragraph>
                         </ActionButton>
                         <Typography.Text size="lg" weight="semiBold" color="black">{count}</Typography.Text>
-                        <ActionButton disabled={count === 0} onClick={() => setCount(prevState => prevState - 1)}>
+                        <ActionButton disabled={count === 1} onClick={() => setCount(prevState => prevState - 1)}>
                             <Typography.Paragraph size="sm" weight="semiBold" color="black">-</Typography.Paragraph>
                         </ActionButton>
                     </div>
-                    <div
-                        className="flex flex-col bg-white rounded-full p-1 w-fit items-center bottom-0 translate-y-[50%] translate-x-[-50%] z-[1000] right-0 absolute">
-                        <Icon name="Home" className="w-10 h-10"/>
+                    <div onClick={()=>setLiked(!liked)}
+                        className="flex flex-col rounded-full transition-all p-1 w-fit items-center bottom-0 translate-y-[50%] translate-x-[-80%] z-[1000] right-0 absolute">
+                        <Icon name="Heart" className={addClass(liked ? "opacity-0 h-0" : "min-h-10 opacity-100 " , "w-10 h-10 transition-all")}/>
+                        <Icon name="FillHeart" className={addClass(liked ? "opacity-100 min-h-10" : "h-0 opacity-0 " , "w-10 h-10 transition-all")}/>
                     </div>
                 </div>
                 <div className="max-w-[70%] h-[400px] relative translate-x-[-20%] translate-y-[15%]">
@@ -130,12 +132,14 @@ function CardTwo() {
             <div className="bg-[#ff9933] flex flex-row-reverse pl-3 rounded-full h-[56px] items-center justify-between p-1 w-[80%] mx-auto">
                 <Typography.Paragraph size="sm" weight="semiBold" color="white"
                                       className="whitespace-nowrap"> 280,000 T</Typography.Paragraph>
-                    <div className="bg-white flex justify-between pl-3 flex-row-reverse p-[1px] w-[70%] h-full rounded-full">
-                        <Button title="افزودن به سبد خرید" text className="!p-0"/>
-                        <div className="bg-[#ff9933] flex items-center justify-center rounded-full h-full w-[30%]">
-                                <Icon name="Facebook"/>
+                    <button className="w-[70%] h-full">
+                        <div className="bg-white flex items-center justify-between pl-3 flex-row-reverse p-[1px] w-full h-full rounded-full">
+                            <Typography.Text size="sm" weight="semiBold" color="black">افزودن به سبد خرید</Typography.Text>
+                            <div className="bg-[#ff9933] flex items-center justify-center rounded-full h-full w-[30%]">
+                                <Icon name="Basket" className="w-8 h-8 [&>path]:stroke-2"/>
+                            </div>
                         </div>
-                    </div>
+                    </button>
             </div>
         </div>
     )

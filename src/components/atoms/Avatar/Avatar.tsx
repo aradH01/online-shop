@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 56px;
-  width: 56px;
+  height: 52px;
+  width: 52px;
 `;
 
 const WrapperText = styled.div`
