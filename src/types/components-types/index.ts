@@ -4,7 +4,7 @@ import {
     DetailedHTMLProps, InputHTMLAttributes,
     MouseEvent, TextareaHTMLAttributes,
 } from "react";
-import {Size} from "@/styles/globals";
+import {Color, Size} from "@/styles/globals";
 
 export interface ButtonProps {
     loading?: boolean,
@@ -78,4 +78,25 @@ export interface SearchBoxProps {
     onClick?: () => void
     onBlur?: () => void
     onFocus?: () => void
+}
+export interface SidebarProps {
+    show: boolean
+}
+export interface HeaderDropdownProps {
+    data?: { id: number, href: string, title: string , icon?:AvailableIcons }[],
+    title: string,
+    className?: string,
+    contentClass?: string
+    onClick?: () => void
+}
+export interface AvatarButtonProps {
+    title: string;
+    avatar?: string;
+    className?: string;
+    avatarClass?:string
+}
+export interface AvatarProps {
+    color?: Color;
+    text?: string;
+    className?: string
 }

@@ -183,9 +183,9 @@ export const Button: React.FC<ButtonProps> = ({
                     color={Themes.dark.font.nonActive}
                     size="md"
                 /> : ''}
-            <div className="flex items-center flex-row-reverse gap-[10px]">
+            <div className="flex items-center overflow-auto flex-row-reverse gap-[10px]">
                 <Icon name={icon || 'Empty'}
-                      className={addClass( "w-[24px] h-[24px]")}/>
+                      className={addClass( "w-[18px] h-[18px]")}/>
                 <Typography.Text size="xsm" weight="normal"
                                  color={(outlined || text) ? "primary" : "white"}>{loading ? "" : title}</Typography.Text>
                 {

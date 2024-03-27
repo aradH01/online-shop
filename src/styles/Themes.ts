@@ -13,6 +13,7 @@ const light = {
         lightPrimary: "#16625b",
         disabled: "#2120241F",
         linearButton: 'linear-gradient(108deg, #5DBDC5 -27.77%, #4AA4A7 125.06%)',
+        glassLinear:"linear-gradient(132.12deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 100%)",
         grayMedium: '#6E6E73',
         superLightGray: '#F5F5F7',
         nonActive: '#92929D',
@@ -31,6 +32,7 @@ const light = {
         warning: '#ff9933',
         success: '#17A561',
         danger: '#FF5A26',
+        darkDanger: '#661b00',
     },
 };
 
@@ -43,13 +45,14 @@ const dark: AppTheme = {
         background: '#FCFCFC',
         primary: '#184D47',
         lightPrimary: "#16625b",
+        linearButton: 'linear-gradient(108deg, #5DBDC5 -27.77%, #4AA4A7 125.06%)',
+        glassLinear:"linear-gradient(132.12deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 100%)",
         disabled: "#2120241F",
         grayMedium: '#6E6E73',
         superLightGray: '#F5F5F7',
         nonActive: '#92929D',
         lightGray: '#E2E2E4',
         tableBorder: '#B9B9B9',
-        linearButton: 'linear-gradient(108deg, #5DBDC5 -27.77%, #4AA4A7 125.06%)',
 
     },
     font: {
@@ -64,6 +67,7 @@ const dark: AppTheme = {
         warning: '#ff9933',
         success: '#17A561',
         danger: '#FF5A26',
+        darkDanger: '#661b00',
     },
 };
 
