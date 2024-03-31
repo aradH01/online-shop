@@ -1,10 +1,11 @@
 'use client'
-import ProductDetail from "@/components/pages/productDetail/productDetail";
+import Cart from "@/components/pages/Cart/Cart";
+import ConfirmProducts from "@/components/pages/confirmProducts/confirmProducts";
 
 export default function Home() {
   return (
     <div className="">
-       <ProductDetail/>
+       <ConfirmProducts/>
     </div>
   );
 }

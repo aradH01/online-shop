@@ -16,6 +16,7 @@ const Container = styled.div`
 
 
 const StyledInput = styled.input`
+  margin-top: 10px;
   &:-moz-placeholder {
     padding-right: 1rem;
     text-align: right;
@@ -84,8 +85,6 @@ const Label = styled.label`
   font-weight: 400;
   pointer-events: none;
   transition: 300ms ease all;
-  top: 32%;
-  left: 28px;
   color: ${({theme}) => theme.font.grayMedium};
 `
 const ErrorText = styled.div`

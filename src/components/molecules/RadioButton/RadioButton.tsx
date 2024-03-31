@@ -17,7 +17,7 @@ const Label = styled.label`
 `
 const Text = styled.label`
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   color: ${({theme}) => theme.font.primary};
   cursor: pointer;
   margin-left: 5px;
@@ -60,7 +60,7 @@ export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
                 </Label>
                 <Text
                     htmlFor={Id}
-                    className="text-[22px] font-montserrat text-black font-[550] ml-4 capitalize cursor-pointer"
+                    className=" font-montserrat text-black ml-4 capitalize cursor-pointer"
                 >
                     {label}
                 </Text>

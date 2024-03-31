@@ -4,6 +4,7 @@ import React, {PropsWithChildren} from "react";
 import {Toast} from "@/components/templates/providers/toast";
 import dynamic from "next/dynamic";
 import {useThemeHeader} from "@/hooks/useHeaderPosition";
+import '@mantine/core/styles.css';
 import {Icon} from "@/components/atoms/Icon";
 
 const Topbar = dynamic(
@@ -15,7 +16,6 @@ const Footer = dynamic(
 );
 const MainLayout = ({children}: PropsWithChildren) => {
     const theme = useThemeHeader();
-    console.log(theme)
     return (
         <>
 

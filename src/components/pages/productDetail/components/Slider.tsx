@@ -57,6 +57,12 @@ export default function Slider() {
                            priority={false}/>
                 </div>
             </SwiperSlide>
+                <SwiperSlide>
+                    <div className="w-full h-[600px] bg-white max-h-[605px] relative">
+                        <Image src={Picture} alt="Slider image" fill className="object-contain" quality={80}
+                               priority={false}/>
+                    </div>
+                </SwiperSlide>
             </Swiper>
             <Swiper
                 className="w-full h-[100px] mt-[50px]"
@@ -88,6 +94,12 @@ export default function Slider() {
                 <SwiperSlide>
                     <div className="w-full h-[100px] max-h-[105px] relative">
                         <Image src={Picture2} alt="Slider image" fill className="object-contain" quality={80}
+                               priority={false}/>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="w-full h-[100px] max-h-[105px] relative">
+                        <Image src={Picture} alt="Slider image" fill className="object-contain" quality={80}
                                priority={false}/>
                     </div>
                 </SwiperSlide>

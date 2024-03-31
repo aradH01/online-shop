@@ -6,6 +6,8 @@ import {useState} from "react";
 import styled from "@emotion/styled";
 import {Button} from "@/components/molecules/Button/Buttom";
 import Slider from "@/components/pages/productDetail/components/Slider";
+import {Icon} from "@/components/atoms/Icon";
+import {addClass} from "@/utils/classNames";
 
 const ActionButton = styled.button`
   width: 24px;
@@ -42,6 +44,7 @@ export const StyledButton = styled.button`
 `
 export default function ProductDetail(){
     const [count, setCount] = useState<number>(1);
+    const [liked, setLiked] = useState<boolean>(false)
 
     return(
         <div className="flex flex-col">
@@ -93,8 +96,13 @@ export default function ProductDetail(){
                                       </div>
                                   </div>
                                   <div className="mt-12 justify-between flex flex-row-reverse">
-                                      <div className="flex  border-solid border-black border w-fit">
-                                          <div className="flex items-center gap-2 w-fit border-solid border-black border-l px-2 h-[48px]">
+                                      <div className="flex items-center rounded-[3px] max-h-[48px] border-solid border-black border w-fit">
+                                          <div onClick={()=>setLiked(!liked)}
+                                               className="px-2">
+                                              <Icon name="Heart" className={addClass(liked ? "opacity-0 h-0" : "min-h-[8px] opacity-100 " , "w-10 transition-all")}/>
+                                              <Icon name="FillHeart" className={addClass(liked ? "opacity-100 min-h-[8px]" : "h-0 opacity-0 " , "w-10 transition-all")}/>
+                                          </div>
+                                          <div className="flex items-center gap-2 w-fit border-solid border-black border-x px-2 h-[48px]">
                                               <ActionButton onClick={() => setCount(prevState => prevState + 1)}>
                                                   <Typography.Paragraph size="sm" weight="semiBold" color="black">+</Typography.Paragraph>
                                               </ActionButton>

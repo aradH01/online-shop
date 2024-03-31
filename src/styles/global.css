@@ -16,3 +16,7 @@ body,
 p {
     margin: 0;
 }
+li::marker{
+    color: black!important;
+    background: black!important;
+}

@@ -414,16 +414,155 @@ const SliderArrowDark = (props: React.SVGProps<SVGSVGElement>) => (
               fill="#1D1D1F"/>
     </svg>
 );
+const Delete = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="512"
+        height="512"
+        enableBackground="new 0 0 512 512"
+        viewBox="0 0 34 34"
+        {...props}
+    >
+        <linearGradient
+            id="a"
+            x1="1.365"
+            x2="33.801"
+            y1="32.994"
+            y2="1.984"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop offset="0" stopColor="#fff33b"></stop>
+            <stop offset="0.04" stopColor="#fee72e"></stop>
+            <stop offset="0.117" stopColor="#fed51b"></stop>
+            <stop offset="0.196" stopColor="#fdca10"></stop>
+            <stop offset="0.281" stopColor="#fdc70c"></stop>
+            <stop offset="0.669" stopColor="#f3903f"></stop>
+            <stop offset="0.888" stopColor="#ed683c"></stop>
+            <stop offset="1" stopColor="#e93e3a"></stop>
+        </linearGradient>
+        <linearGradient
+            id="b"
+            x1="3.09"
+            x2="35.526"
+            y1="34.798"
+            y2="3.788"
+            xlinkHref="#a"
+        ></linearGradient>
+        <linearGradient
+            id="c"
+            x1="5"
+            x2="37.436"
+            y1="36.796"
+            y2="5.786"
+            xlinkHref="#a"
+        ></linearGradient>
+        <linearGradient
+            id="d"
+            x1="1.18"
+            x2="33.616"
+            y1="32.8"
+            y2="1.79"
+            xlinkHref="#a"
+        ></linearGradient>
+        <g data-name="Layer 2">
+            <path
+                fill="url(#a)"
+                d="M30 9a3 3 0 00-3-3h-5a5 5 0 00-10 0H7a2.993 2.993 0 00-1 5.816v16.448A4.741 4.741 0 0010.735 33h12.53A4.741 4.741 0 0028 28.264V11.816A3 3 0 0030 9zM17 3a3 3 0 013 3h-6a3 3 0 013-3zm9 25.264A2.739 2.739 0 0123.265 31h-12.53A2.739 2.739 0 018 28.264V12h18zM27 10H7a1 1 0 010-2h20a1 1 0 010 2z"
+                data-original="url(#a)"
+            ></path>
+            <path
+                fill="url(#b)"
+                d="M17 28a1 1 0 001-1V16a1 1 0 00-2 0v11a1 1 0 001 1z"
+                data-original="url(#b)"
+            ></path>
+            <path
+                fill="url(#c)"
+                d="M21 27a1 1 0 001-1v-9a1 1 0 00-2 0v9a1 1 0 001 1z"
+                data-original="url(#c)"
+            ></path>
+            <path
+                fill="url(#d)"
+                d="M13 27a1 1 0 001-1v-9a1 1 0 00-2 0v9a1 1 0 001 1z"
+                data-original="url(#d)"
+            ></path>
+        </g>
+    </svg>
+);
+const LeftArrow = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="512"
+        height="512"
+        enableBackground="new 0 0 512 512"
+        viewBox="0 0 492 492"
+        {...props}
+    >
+        <path
+            d="M198.608 246.104L382.664 62.04c5.068-5.056 7.856-11.816 7.856-19.024 0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12C361.476 2.792 354.712 0 347.504 0s-13.964 2.792-19.028 7.864L109.328 227.008c-5.084 5.08-7.868 11.868-7.848 19.084-.02 7.248 2.76 14.028 7.848 19.112l218.944 218.932c5.064 5.072 11.82 7.864 19.032 7.864 7.208 0 13.964-2.792 19.032-7.864l16.124-16.12c10.492-10.492 10.492-27.572 0-38.06L198.608 246.104z"
+            data-original="#000000"
+        ></path>
+    </svg>
+)
+const Zipcode = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="512"
+        height="512"
+        enableBackground="new 0 0 512 512"
+        viewBox="0 0 512 512"
+        {...props}
+    >
+        <path
+            d="M502 492h-28V40c0-22.056-17.944-40-40-40H78C55.944 0 38 17.944 38 40v452H10c-5.522 0-10 4.478-10 10s4.478 10 10 10h492c5.522 0 10-4.478 10-10s-4.478-10-10-10zM106 20h300v130.185H106V20zm300 150.185v20.063h-17v-20.063h17zm-103.029 215.93L354.857 438H152.613l127.823-176.126a10 10 0 00.001-11.748l-58.017-79.941H369v253.673l-51.886-51.886c-3.906-3.904-10.236-3.904-14.143 0-3.905 3.905-3.905 10.237 0 14.143zM216.667 246c-5.522 0-10 4.478-10 10v73.469l-22.462 30.95v-81.552c0-5.522-4.478-10-10-10s-10 4.478-10 10v109.11L143 417.195v-247.01h54.707L259.986 256l-33.319 45.911V256c0-5.522-4.478-10-10-10zM106 170.185h17v20.063h-17v-20.063zM454 492H58V40c0-11.028 8.972-20 20-20h8v180.247c0 5.522 4.478 10 10 10h27V448c0 5.522 4.478 10 10 10h246c5.522 0 10-4.478 10-10V210.247h27c5.522 0 10-4.478 10-10V20h8c11.028 0 20 8.972 20 20v452z"
+            data-original="#000000"
+        ></path>
+        <path
+            d="M181.279 234.94a10.072 10.072 0 00-7.069-2.93c-2.641 0-5.21 1.07-7.08 2.93a10.066 10.066 0 00-2.92 7.07c0 2.64 1.06 5.21 2.92 7.07a10.102 10.102 0 007.08 2.93c2.63 0 5.2-1.07 7.069-2.93a10.051 10.051 0 002.921-7.07c0-2.63-1.061-5.21-2.921-7.07zM222.716 51c-15.825 0-28.7 12.875-28.7 28.7v30.6c0 15.825 12.875 28.7 28.7 28.7s28.7-12.875 28.7-28.7V79.7c0-15.825-12.875-28.7-28.7-28.7zm8.7 59.3c0 4.797-3.903 8.7-8.7 8.7s-8.7-3.903-8.7-8.7V79.7c0-4.797 3.903-8.7 8.7-8.7s8.7 3.903 8.7 8.7v30.6zM289.431 85h-3.4c-3.859 0-7-3.141-7-7s3.141-7 7-7h20.4c5.522 0 10-4.478 10-10s-4.478-10-10-10h-20.4c-14.888 0-27 12.112-27 27s12.112 27 27 27h3.4c3.859 0 7 3.141 7 7s-3.141 7-7 7h-20.4c-5.522 0-10 4.478-10 10s4.478 10 10 10h20.4c14.888 0 27-12.112 27-27s-12.112-27-27-27zm87.976-34h-40.801c-5.522 0-10 4.478-10 10s4.479 10 10.001 10h10.4v58c0 5.522 4.478 10 10 10s10-4.478 10-10V71h10.4c5.522 0 10-4.478 10-10s-4.478-10-10-10zm-222.023 0h-20.4c-5.522 0-10 4.478-10 10v68c0 5.522 4.478 10 10 10s10-4.478 10-10v-24h10.4c14.888 0 27-12.112 27-27s-12.112-27-27-27zm0 34h-10.4V71h10.4c3.859 0 7 3.141 7 7s-3.141 7-7 7z"
+            data-original="#000000"
+        ></path>
+    </svg>
+)
+const Mobile = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="512"
+        height="512"
+        enableBackground="new 0 0 512 512"
+        viewBox="0 0 512 512"
+        {...props}
+    >
+        <path
+            d="M302.933 42.667h-51.2c-7.074 0-12.8 5.726-12.8 12.8s5.726 12.8 12.8 12.8h51.2c7.074 0 12.8-5.726 12.8-12.8s-5.726-12.8-12.8-12.8z"
+            data-original="#000000"
+        ></path>
+        <path
+            d="M358.4 0H153.6c-28.228 0-51.2 22.972-51.2 51.2v409.6c0 28.228 22.972 51.2 51.2 51.2h204.8c28.228 0 51.2-22.972 51.2-51.2V51.2c0-28.228-22.972-51.2-51.2-51.2zM384 460.8c0 14.14-11.46 25.6-25.6 25.6H153.6c-14.14 0-25.6-11.46-25.6-25.6V51.2c0-14.14 11.46-25.6 25.6-25.6h204.8c14.14 0 25.6 11.46 25.6 25.6v409.6z"
+            data-original="#000000"
+        ></path>
+        <circle cx="256" cy="443.733" r="25.6" data-original="#000000"></circle>
+        <circle
+            cx="209.067"
+            cy="55.467"
+            r="12.8"
+            data-original="#000000"
+        ></circle>
+    </svg>
+)
 const Empty = (props: React.SVGProps<SVGSVGElement>) => null;
 export const Icons = {
     Profile,
     Basket,
+    Zipcode,
+    Mobile,
     SliderArrowDark,
+    LeftArrow,
     SliderArrowLight,
     Loading,
     Empty,
     Heart,
     FillHeart,
+    Delete,
     Search,
     UpArrow,
     Calender,

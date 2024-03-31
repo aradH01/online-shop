@@ -6,6 +6,7 @@ import {
 } from "react";
 import {Color, Size} from "@/styles/globals";
 import {ColorValueHex} from "@/types/common";
+import ExistAddresses from "@/components/pages/confirmProducts/modals/ExistAddresses";
 
 export interface ButtonProps {
     loading?: boolean,
@@ -113,4 +114,13 @@ export interface ArrowButtonProps {
     onClick?: () => void
     className?: string
 
+}
+export interface AddAddressModalProps {
+    opened: boolean,
+    close: () => void,
+}
+export interface ExistAddressesModalProps {
+    onClick?:()=>void
+    opened: boolean,
+    close: () => void,
 }

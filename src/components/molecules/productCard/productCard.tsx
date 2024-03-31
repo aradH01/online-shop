@@ -106,8 +106,8 @@ function CardTwo() {
                     </div>
                     <div onClick={()=>setLiked(!liked)}
                         className="flex flex-col rounded-full transition-all p-1 w-fit items-center bottom-0 translate-y-[50%] translate-x-[-80%] z-[1000] right-0 absolute">
-                        <Icon name="Heart" className={addClass(liked ? "opacity-0 h-0" : "min-h-10 opacity-100 " , "w-10 h-10 transition-all")}/>
-                        <Icon name="FillHeart" className={addClass(liked ? "opacity-100 min-h-10" : "h-0 opacity-0 " , "w-10 h-10 transition-all")}/>
+                        <Icon name="Heart" className={addClass(liked ? "opacity-0 h-0" : "min-h-10 opacity-100 " , "w-10 transition-all")}/>
+                        <Icon name="FillHeart" className={addClass(liked ? "opacity-100 min-h-10" : "h-0 opacity-0 " , "w-10 transition-all")}/>
                     </div>
                 </div>
                 <div className="max-w-[70%] h-[400px] relative translate-x-[-20%] translate-y-[15%]">
