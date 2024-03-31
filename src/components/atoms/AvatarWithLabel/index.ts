@@ -1,0 +1,1 @@
+export {AvatarWithLabel} from './AvatarWithLabel';
