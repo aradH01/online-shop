@@ -402,10 +402,24 @@ const FillHeart = (props: React.SVGProps<SVGSVGElement>) => (
         ></path>
     </svg>
 );
+const SliderArrowLight = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" {...props}>
+        <path fillRule="evenodd" clipRule="evenodd" d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z"
+              fill="#FCFCFC"/>
+    </svg>
+);
+const SliderArrowDark = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" {...props}>
+        <path fillRule="evenodd" clipRule="evenodd" d="M16 7H3.83L9.42 1.41L8 0L0 8L8 16L9.41 14.59L3.83 9H16V7Z"
+              fill="#1D1D1F"/>
+    </svg>
+);
 const Empty = (props: React.SVGProps<SVGSVGElement>) => null;
 export const Icons = {
     Profile,
     Basket,
+    SliderArrowDark,
+    SliderArrowLight,
     Loading,
     Empty,
     Heart,

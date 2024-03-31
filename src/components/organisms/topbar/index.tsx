@@ -143,9 +143,8 @@ export const Topbar = () => {
                             <Link href="">محصولات</Link>
                         </div>
                         <Link prefetch={false} href={'/'} className="lt:mr-[40px] mr-0">
-                            <div className='sm:w-[200px] w-[150px] text-black'>
-                               {/* <Image src={AppLogo} alt="logo"/>*/}
-                                Logo of Shop
+                            <div className='sm:w-[100px] w-[80px] text-black'>
+                                <Image src={AppLogo} alt="logo"/>
                             </div>
                         </Link>
                         <div className="flex  items-center justify-start">
@@ -248,9 +247,8 @@ export const Topbar = () => {
                             sub header data
                         </div>
                         <Link prefetch={false} href={'/'} className="lt:mr-[40px] mr-0">
-                            <div className='sm:w-[200px] w-[150px] text-black'>
-                                {/* <Image src={AppLogo} alt="logo"/>*/}
-                                Logo of Shop
+                            <div className='sm:w-[100px] w-[80px] text-black'>
+                                 <Image src={AppLogo} alt="logo"/>
                             </div>
                         </Link>
                         <div className="flex flex-row-reverse items-center justify-center">

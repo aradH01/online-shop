@@ -1,14 +1,10 @@
 'use client'
-import ProductCard from "@/components/molecules/productCard/productCard";
+import ProductDetail from "@/components/pages/productDetail/productDetail";
 
 export default function Home() {
   return (
     <div className="">
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-
+       <ProductDetail/>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import './globals.css'
 import type {Metadata} from 'next'
 import MainLayout from "@/components/templates/Layouts/main-layout";
 import {MantineRootProvider} from "@/components/templates/providers/MantineProvider";
+import '@mantine/carousel/styles.css';
 import {Montserrat, Open_Sans} from "next/font/google"
 import {addClass} from "@/utils/classNames";
 

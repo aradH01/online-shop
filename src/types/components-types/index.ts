@@ -5,6 +5,7 @@ import {
     MouseEvent, TextareaHTMLAttributes,
 } from "react";
 import {Color, Size} from "@/styles/globals";
+import {ColorValueHex} from "@/types/common";
 
 export interface ButtonProps {
     loading?: boolean,
@@ -100,4 +101,16 @@ export interface AvatarProps {
     color?: Color;
     text?: string;
     className?: string
+}
+export type BreadCrumbsProps = {
+    crumbs?: { label?: string; href: string; static?: boolean }[];
+    color?: ColorValueHex;
+    icon?: { fill?: ColorValueHex; opacity?: 50 | 100 };
+    className?: string;
+};
+export interface ArrowButtonProps {
+    outlined?: boolean
+    onClick?: () => void
+    className?: string
+
 }

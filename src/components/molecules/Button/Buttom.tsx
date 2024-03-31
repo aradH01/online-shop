@@ -117,7 +117,7 @@ svg{
 
     &:hover {
       border-width: 1px 2px 1px 2px;
-     border-radius: 5% !important;
+      border-radius: 5% !important;
       border-collapse: separate;
       border-style: solid;
       background-clip: content-box, border-box;
