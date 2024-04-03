@@ -7,6 +7,8 @@ import Image, {StaticImageData} from "next/image";
 import styled from "@emotion/styled";
 import {Icon} from "@/components/atoms/Icon";
 import {Button} from "@/components/molecules/Button/Buttom";
+import Link from "next/link";
+import {Path} from "@/constants/enums";
 
 const Table=styled.div`
   ::-webkit-scrollbar {
@@ -178,7 +180,9 @@ export default function Cart(){
                         <Typography.Paragraph size="sm" weight="medium" color="danger">450,000</Typography.Paragraph>
                     </div>
                 </div>
-                <Button title="تایید سفارش" className="!w-[30%]"/>
+               <Link href={Path.ConfirmProducts}>
+                   <Button title="تایید سفارش" />
+               </Link>
             </div>
         </div>
     )

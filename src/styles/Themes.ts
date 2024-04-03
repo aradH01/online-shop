@@ -24,7 +24,8 @@ const light = {
     font: {
         white: '#FCFCFC',
         black: '#000',
-        primary: '#184D47',
+        componentPrimary:"#184D47",
+        primary: '#1D1D1F',
         grayMedium: '#6E6E73',
         grayLight: '#E2E2E4',
         currentColor: 'currentColor',
@@ -60,6 +61,7 @@ const dark: AppTheme = {
     font: {
         white: '#FCFCFC',
         black: '#000',
+        componentPrimary:"#184D47",
         primary: '#1D1D1F',
         grayMedium: '#6E6E73',
         grayLight: '#E2E2E4',

@@ -1,6 +1,5 @@
+'use client'
 import {BreadCrumbs} from "@/components/molecules/breadcrumbs";
-import Image from "next/image";
-import Picture from "@/images/pic2-removebg-preview.png"
 import {Typography} from "@/components/atoms/Typography";
 import {useState} from "react";
 import styled from "@emotion/styled";

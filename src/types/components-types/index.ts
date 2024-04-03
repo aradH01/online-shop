@@ -1,12 +1,14 @@
 import {AvailableIcons} from "@/components/atoms/Icon";
 import {
     AriaAttributes,
-    DetailedHTMLProps, InputHTMLAttributes,
-    MouseEvent, TextareaHTMLAttributes,
+    DetailedHTMLProps, Dispatch, InputHTMLAttributes,
+    MouseEvent, SetStateAction, TextareaHTMLAttributes,
 } from "react";
 import {Color, Size} from "@/styles/globals";
 import {ColorValueHex} from "@/types/common";
 import ExistAddresses from "@/components/pages/confirmProducts/modals/ExistAddresses";
+import {StaticImageData} from "next/image";
+import {IOrderHistory, IOrderProductsImage} from "@/types/pages";
 
 export interface ButtonProps {
     loading?: boolean,
@@ -123,4 +125,30 @@ export interface ExistAddressesModalProps {
     onClick?:()=>void
     opened: boolean,
     close: () => void,
+}
+export interface CartDropdownProps {
+    data?: { id: number, name: string , count:number | string , image:StaticImageData | string , fee:string }[],
+    className?: string,
+    contentClass?: string
+    onClick?: () => void
+}
+export interface OrderHistoryTabsProps {
+    tabs?: IOrderHistory[]
+    currentTab: number
+    setCurrentTab: Dispatch<SetStateAction<number>>
+}
+export interface OrderCardsProps{
+    id?: number
+    order_at?: string
+    step?: string
+    arrived_step?:string
+    transferee?:string
+    transferee_phone?:string
+    address?:string
+    transfer_price?:string
+    transfer_barcode?:string
+    price?: string
+    order_code?:string
+    url?: string
+    image?: IOrderProductsImage[]
 }

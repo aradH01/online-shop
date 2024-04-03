@@ -35,6 +35,7 @@ const DropdownItem = styled.div`
   margin-top: 2rem;
   min-width: max-content;
   width: 15rem;
+  pointer-events: none;
   box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
   100%, 0.075),
     /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05),
@@ -47,6 +48,7 @@ const DropdownItem = styled.div`
   transform: translateY(-30px) translateX(45%);
   &.show {
     opacity: 1;
+    pointer-events: auto;
     transform: translateY(-20px) translateX(45%);
     transition: all ease-out 300ms;
   }
@@ -97,13 +99,20 @@ const DropdownButton = styled.button`
   }
 
 `
-const Widget = styled.div`
+const Widget = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0.5rem 0;
   padding: 0.3rem;
   width: 100%;
+  border-bottom: 1px solid transparent;
+  transition: all ease-out 500ms;
+  &:hover {
+    border-bottom: 1px solid #6d6262;
+    transition: all ease-out 500ms;
+    border-radius: 15px;
+  }
 `
 export const HeaderDropdown: React.FC<HeaderDropdownProps> = ({data, contentClass, title, className, onClick}) => {
     const [show, setShow] = useState(false)
@@ -127,19 +136,19 @@ export const HeaderDropdown: React.FC<HeaderDropdownProps> = ({data, contentClas
                             <Typography.Paragraph size="sm" weight="medium" color="black">{title}</Typography.Paragraph>
                         </div>
                         {data?.map((link) => {
-                            return <Widget key={link.id}>
-                                <Link href={link.href} onClick={async () => {
-                                    router.push(`${link.href}`)
-                                }}>
+                            return <Widget href={link.href} key={link.id} onClick={async () => {
+                                router.push(`${link.href}`)
+                            }}>
+                                <div >
                                     {link.title}
-                                </Link>
+                                </div>
                                 <Icon name={link.icon || "Empty"} className="[&>path]:!stroke-2 w-6 h-6"/>
                             </Widget>
                         })}
-                        <div className="flex border-t border-solid border-black pt-2 gap-[6px] flex-row-reverse w-full items-center justify-center">
+                        <Link href="/" className="flex border-t border-solid border-black pt-2 gap-[6px] flex-row-reverse w-full items-center justify-center">
                             <Icon name="Logout" className="w-6 h-6"/>
                             <Typography.Paragraph size="sm" weight="semiBold" color="darkDanger">خروج</Typography.Paragraph>
-                        </div>
+                        </Link>
                     </DropdownItem>
 
                 </Dropdown>

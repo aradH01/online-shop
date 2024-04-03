@@ -33,6 +33,7 @@ const StyledInput = styled.input`
   height: 56px;
   padding: 16px 0 16px 16px;
   border-radius: 14px;
+  color: ${({theme}) => theme.font.primary};
   display: block;
   text-align: right;
   border: 1px solid transparent;

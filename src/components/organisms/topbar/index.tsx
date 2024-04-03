@@ -12,6 +12,10 @@ import LightMenu from '@/images/lightMenu.svg'
 import {Sidebar} from "@/components/organisms/topbar/components/sidebar";
 import {addClass} from "@/utils/classNames";
 import {HeaderDropdown} from "@/components/atoms/HeaderDropdown/HeaderDropdown";
+import {Icon} from "@/components/atoms/Icon";
+import Picture2 from "@/images/pic4.jpg";
+import {CartDropdown} from "@/components/molecules/CartDropdown/CartDropdown";
+import {Path} from "@/constants/enums";
 
 const StyledLink = styled(Link)`
   color: ${({theme}) => theme.font.primary};
@@ -117,9 +121,21 @@ const SearchTable = styled.div`
     background: ${({theme}) => theme.components.grayMedium};
   }
 `
+const Cart=styled.div`
+
+
+`
 const profileData=[
-    {id:1 , href:"" , title:"محصولات", icon:"Basket"} as const,
-    {id:2 , href:"" , title:"پروفایل", icon:"Profile"} as const
+    {id:1 , href:Path.OrdersList , title:"سفارش ها", icon:"Bag"} as const,
+    {id:2 , href:"" , title:"لیست ها", icon:"Heart"} as const,
+    {id:3 , href:"" , title:"پیغام ها", icon:"Notification"} as const
+]
+const CartData=[
+    {id:1 , name:"جد جوش سیمپل", image:Picture2 , count:2 , fee:"230000" },
+    {id:2 , name:"جد جوش سیمپل", image:Picture2 , count:2 , fee:"230000" },
+    {id:3 , name:"جد جوش سیمپل", image:Picture2 , count:2 , fee:"230000" },
+    {id:4 , name:"جد جوش سیمپل", image:Picture2 , count:2 , fee:"230000" },
+
 ]
 export const Topbar = () => {
     const theme = useThemeHeader();
@@ -137,10 +153,12 @@ export const Topbar = () => {
                 {theme === "Header" ?
                     <nav
                         className="relative w-[84rem] max-w-[95%] mx-auto h-full flex flex-row-reverse items-center justify-between transition-all">
-                        <div className="text-black flex flex-row gap-6">
-                            <Link href="">محصولات</Link>
-                            <Link href="">محصولات</Link>
-                            <Link href="">محصولات</Link>
+                        <div className="text-black items-center flex flex-row gap-6">
+                            <Link href="">محصولات آرایشی</Link>
+                            <Link href="">محصولات بهداشتی</Link>
+                            <Cart>
+                                <CartDropdown data={CartData}/>
+                            </Cart>
                         </div>
                         <Link prefetch={false} href={'/'} className="lt:mr-[40px] mr-0">
                             <div className='sm:w-[100px] w-[80px] text-black'>

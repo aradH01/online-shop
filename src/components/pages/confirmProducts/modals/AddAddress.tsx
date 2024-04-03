@@ -30,7 +30,7 @@ export default function AddAddress({close, opened}: AddAddressModalProps) {
 
                centered
                title="آدرس جدید">
-            <form className="flex flex-col gap-4 border-t border-solid border-black pt-2">
+            <form  onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 border-t border-solid border-black pt-2">
                 <Input label="نشانی پستی" className="[&>div>input]:!h-[100px]" {...register("full_address")}/>
                 <div className="flex gap-3">
                     <Input label="استان" {...register("province")}/>
@@ -52,7 +52,7 @@ export default function AddAddress({close, opened}: AddAddressModalProps) {
                     </div>
                     <Input label="شماره موبایل" {...register("phone")}/>
                 </div>
-                <Button title="Send" type="submit" className="!w-1/2 mx-auto mt-4"/>
+                <Button title="ثبت آدرس" type="submit" className="!w-1/2 mx-auto mt-4"/>
             </form>
         </Modal>
     )
