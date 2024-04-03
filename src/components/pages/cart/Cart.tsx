@@ -1,7 +1,7 @@
+'use client'
 import { Typography } from "@/components/atoms/Typography";
 import {HorizontalTable, IHorizontalTable} from "@/components/organisms/HorizontalTable/HorizontalTable";
 import {useMemo, useState} from "react";
-import Picture1 from "@/images/pic3.jpg";
 import Picture2 from "@/images/pic4.jpg";
 import Image, {StaticImageData} from "next/image";
 import styled from "@emotion/styled";
