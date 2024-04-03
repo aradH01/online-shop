@@ -56,13 +56,13 @@ const Tab = styled.div`
 
 export const OrderHistoryTabs = ({setCurrentTab, currentTab, tabs}: OrderHistoryTabsProps) => {
     const router = useRouter()
-    const params = useSearchParams()
+  //  const params = useSearchParams()
     return (
         <Wrapper className="w-full overflow-x-auto overflow-y-hidden">
             <Tab
                 onClick={() => {
                     setCurrentTab(2)
-                    const tmpParams = new URLSearchParams(params)
+                    const tmpParams = new URLSearchParams("2")
                     tmpParams.set("tab", "2")
                     router.replace(`?${tmpParams.toString()}`, {scroll: false})
                 }}
@@ -74,7 +74,7 @@ export const OrderHistoryTabs = ({setCurrentTab, currentTab, tabs}: OrderHistory
             <Tab
                 onClick={() => {
                     setCurrentTab(1)
-                    const tmpParams = new URLSearchParams(params)
+                    const tmpParams = new URLSearchParams("1")
                     tmpParams.set("tab", "1")
                     router.replace(`?${tmpParams.toString()}`, {scroll: false})
                 }}
