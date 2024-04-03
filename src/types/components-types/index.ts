@@ -152,3 +152,9 @@ export interface OrderCardsProps{
     url?: string
     image?: IOrderProductsImage[]
 }
+export interface IEditModals{
+    onClick?:()=>void
+    opened: boolean,
+    close: () => void,
+    index?:number
+}

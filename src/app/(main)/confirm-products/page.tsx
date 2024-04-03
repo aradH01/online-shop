@@ -1,6 +1,5 @@
-'use client'
-
-import ConfirmProducts from "@/components/pages/confirmProducts/confirmProducts";
+import dynamic from "next/dynamic";
+const ConfirmProducts = dynamic(() => import('@/components/pages/confirmProducts/confirmProducts'));
 
 export default function ConfirmProductsPage() {
     return (

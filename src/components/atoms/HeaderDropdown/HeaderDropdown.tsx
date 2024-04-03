@@ -133,7 +133,10 @@ export const HeaderDropdown: React.FC<HeaderDropdownProps> = ({data, contentClas
                     <DropdownItem className={addClass(contentClass, show && "show")}>
                         <div className="flex w-full gap-4 flex-col items-center">
                             <AvatarWithLabel title={title} avatar=""/>
-                            <Typography.Paragraph size="sm" weight="medium" color="black">{title}</Typography.Paragraph>
+                            <Link href={Path.Dashboard} className="!flex items-center gap-4 ">
+                                <Icon name="LeftArrow" className="rotate-180 w-3 h-3"/>
+                                <Typography.Paragraph size="sm" weight="medium" color="black">{title}</Typography.Paragraph>
+                            </Link>
                         </div>
                         {data?.map((link) => {
                             return <Widget href={link.href} key={link.id} onClick={async () => {
