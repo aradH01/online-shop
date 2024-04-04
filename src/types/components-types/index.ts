@@ -9,6 +9,8 @@ import {ColorValueHex} from "@/types/common";
 import ExistAddresses from "@/components/pages/confirmProducts/modals/ExistAddresses";
 import {StaticImageData} from "next/image";
 import {IOrderHistory, IOrderProductsImage} from "@/types/pages";
+import NotificationCard from "@/components/pages/notification/components/notificationCard";
+import SmallProCard from "@/components/molecules/SmallProCard/SmallProCard";
 
 export interface ButtonProps {
     loading?: boolean,
@@ -157,4 +159,25 @@ export interface IEditModals{
     opened: boolean,
     close: () => void,
     index?:number
+}
+export interface AddressCardProps{
+    address:{city?:string , province?:string , location?:string}
+    phone?:string
+    zipCode?:string
+    addAddress?:()=>void
+    deleteAddress?:()=>void
+    fullName?:string
+}
+export interface NotificationCardProps{
+    title?:string
+    onClick?:()=>void
+    date?:string
+}
+export interface SmallProCardProps{
+    title?:string
+    description?:string
+    onClick?:()=>void
+    onDelete?:()=>void
+    image?:StaticImageData
+    price?:string
 }

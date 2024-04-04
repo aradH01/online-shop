@@ -7,6 +7,7 @@ import Picture2 from "@/images/pic4.jpg"
 import {OrderHistoryType} from "@/types/pages";
 import RunningOrders from "@/components/pages/ordersHistory/sections/runningOrders";
 import ArrivedOrders from "@/components/pages/ordersHistory/sections/arrivedOrders";
+import SubHeader from "@/components/organisms/subHeader/subHeader";
 export default function OrdersHistory(){
     const data:OrderHistoryType[]=[
         {id:1 , list:{
@@ -55,13 +56,15 @@ export default function OrdersHistory(){
     ]
     const [currentTab, setCurrentTab] = useState(0);
     return(
-        <div className="w-[84rem] mb-[64px] mt-[100px] mx-auto max-w-[95%]">
-
-            <OrderHistoryTabs currentTab={currentTab} setCurrentTab={setCurrentTab}
-                                tabs={data.map(item=>item.list)}/>
-            <div className="bg-[#E2E2E4] flex flex-col gap-4 min-h-[180px] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] rounded-3xl py-8 px-6 mt-[40px]">
-                {currentTab===1 ? <RunningOrders data={data}/> : <ArrivedOrders data={data}/>}
-            </div>
-            </div>
+       <div>
+           <SubHeader/>
+           <div className="w-[84rem] mb-[64px] mt-[100px] mx-auto max-w-[95%]">
+               <OrderHistoryTabs currentTab={currentTab} setCurrentTab={setCurrentTab}
+                                 tabs={data.map(item=>item.list)}/>
+               <div className="bg-[#E2E2E4] flex flex-col gap-4 min-h-[180px] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] rounded-3xl py-8 px-6 mt-[40px]">
+                   {currentTab===1 ? <RunningOrders data={data}/> : <ArrivedOrders data={data}/>}
+               </div>
+           </div>
+       </div>
     )
 }

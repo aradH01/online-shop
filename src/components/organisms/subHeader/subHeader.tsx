@@ -49,15 +49,15 @@ export default function SubHeader(props:{className?:string}){
                     </div>
                     <div className="flex items-center gap-2">
                         <Icon name="Notification" className="w-6 h-6"/>
-                        <Link href="/" className={addClass("" === url ? "disable" : '')}>پیغام ها</Link>
+                        <Link href={Path.Notification} className={addClass(Path.Notification === url ? "disable" : '')}>پیغام ها</Link>
                     </div>
                     <div className="flex items-center gap-2">
                         <Icon name="Heart" className="w-6 h-6"/>
-                        <Link href="/" className={addClass("" === url ? "disable" : '')}>لیست ها</Link>
+                        <Link href={Path.Favorites} className={addClass(Path.Favorites === url ? "disable" : '')}>لیست ها</Link>
                     </div>
                     <div className="flex items-center gap-2">
                         <Icon name="Bag" className="w-6 h-6"/>
-                        <Link href="/" className={addClass("" === url ? "disable" : '')}>سفارش ها</Link>
+                        <Link href={Path.OrdersList} className={addClass(Path.OrdersList === url ? "disable" : '')}>سفارش ها</Link>
                     </div>
                 </div>
             </div>

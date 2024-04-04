@@ -12,8 +12,11 @@ const config: Config = {
         'gradient-conic':
             'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'glass-bg' : 'linear-gradient(132.12deg, rgba(255, 255, 255, 0.35) 70%, rgba(255, 255, 255, 0.15) 100%)',
+        'light-glass-bg' : 'linear-gradient(132.12deg, rgba(255, 255, 255, 0.35) 40%, rgba(255, 255, 255, 0.15) 20%)',
+        'super-light-glass-bg' : 'linear-gradient(180.07deg, rgba(255, 255, 255, 0.1) 0.07%, rgba(255, 255, 255, 0.4) 0.07%, rgba(255, 255, 255, 0.1) 57.61%);',
+        'soft-glass-bg' : 'linear-gradient(132.12deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 100%)',
         "green-linear" : "linear-gradient(243.35deg, #34929A 16.71%, #155557 83.29%)",
-        "logo-bg" : "url('/public/assets/images/login-bg.jpg')"
+        "logo-bg" : "url('/public/assets/images/login-bg.jpg')",
       },
       backgroundColor:{
         lightPrimary: "#16625b",

@@ -8,4 +8,6 @@ export enum Path {
     OrdersList="/orders-list",
     Dashboard="/dashboard",
     Addresses="/addresses",
+    Notification="/notifications",
+    Favorites="/favorites-list",
 }
