@@ -181,3 +181,20 @@ export interface SmallProCardProps{
     image?:StaticImageData
     price?:string
 }
+export interface NewProCardProps{
+    title?:string
+    description?:string
+    onClick?:()=>void
+    onDelete?:()=>void
+    image:StaticImageData
+    price?:string
+}
+export interface EventsCardProps {
+    image: string | StaticImageData,
+    withLink?: boolean,
+    className?:string
+    title?: string,
+    description?: string,
+    href?: string
+    glassMorphism?: boolean
+}

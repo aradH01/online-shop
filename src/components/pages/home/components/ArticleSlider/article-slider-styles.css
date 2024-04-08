@@ -1,0 +1,13 @@
+.swiper-button-prev,
+.swiper-button-next {
+   color: #1a3732
+}
+.swiper-slide-active{
+   border-radius: 0 !important;
+   transition: all ease 200ms;
+   background-color: transparent!important;
+
+}
+.swiper-slide{
+   width: fit-content!important;
+}
