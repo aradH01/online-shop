@@ -7,7 +7,6 @@ import Placeholder from '@/assets/imagePlaceholder.svg'
 
 const Wrapper = styled.div`
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 49.92%, rgba(0, 0, 0, 0.92) 90.24%), lightgray 1.592px -6.754px / 100% 224.37% no-repeat;
-  width: fit-content;
 `
 const Title = styled(Link)`
   color: ${({theme}) => theme.font.primary};
@@ -42,10 +41,10 @@ const Information = styled.div`
 `
 export default function ArticleCard({ title, description, href, image, glassMorphism}: EventsCardProps) {
     return (
-        <div className="group hover:rounded transition-all w-fit">
-            <Wrapper className="relative flex justify-center items-center">
+        <div className="group hover:rounded transition-all">
+            <Wrapper className="relative w-full flex justify-center items-center">
                 <Link href={href || '/'}>
-                    <div className="w-[350px] h-[440px] max-w-full">
+                    <div className="w-full h-[440px] max-w-full">
                         <Image src={image} alt={title || "event Picture"} priority
                                fill
                                quality={60}
