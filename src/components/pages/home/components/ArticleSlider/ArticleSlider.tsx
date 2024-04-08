@@ -16,7 +16,7 @@ export default function ArticleSlider() {
     const [controlledSwiper, setControlledSwiper] = useState(null);
 
     return (
-        <div>
+        <div className="mt-10">
             <Swiper
                 modules={[Navigation, Pagination, Controller, A11y]}
                 spaceBetween={30}
