@@ -55,7 +55,7 @@ export default function ArticleCard({ title, description, href, image, glassMorp
                     </div>
                 </Link>
                 <Information
-                    className="opacity-0 group-hover:opacity-100 transition-all py-[10px] translate-y-[50%] absolute flex flex-col items-center w-[90%] px-6 top-[20%]">
+                    className="md:opacity-0 group-hover:opacity-100 transition-all py-[10px] translate-y-[50%] absolute flex flex-col items-center w-[90%] px-6 top-[20%]">
                     <div className="w-full">
                         <Title href={href || '/'}>{title}</Title>
                         <div className="note">

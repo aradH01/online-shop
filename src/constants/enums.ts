@@ -10,4 +10,6 @@ export enum Path {
     Addresses="/addresses",
     Notification="/notifications",
     Favorites="/favorites-list",
+    CareProducts="/care-products",
+    BeautyProducts="/beauty-products",
 }

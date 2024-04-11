@@ -198,3 +198,17 @@ export interface EventsCardProps {
     href?: string
     glassMorphism?: boolean
 }
+export interface LargeProCardProps{
+    title?:string
+    description?:string
+    onClick?:()=>void
+    image?:StaticImageData
+    price?:string
+
+}
+export interface CatButtonsProps {
+    label?: string,
+    categories: { label: string, value: number | string, selected: boolean }[]
+    className?: string,
+    onClick?: (categories: CatButtonsProps["categories"]) => void
+}

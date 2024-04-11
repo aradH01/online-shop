@@ -16,6 +16,8 @@ import {Icon} from "@/components/atoms/Icon";
 import Picture2 from "@/images/pic4.jpg";
 import {CartDropdown} from "@/components/molecules/CartDropdown/CartDropdown";
 import {Path} from "@/constants/enums";
+import {usePathname} from "next/navigation";
+import {Typography} from "@/components/atoms/Typography";
 
 const StyledLink = styled(Link)`
   color: ${({theme}) => theme.font.primary};
@@ -122,7 +124,9 @@ const SearchTable = styled.div`
   }
 `
 const Cart=styled.div`
-
+display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
 
 `
 const profileData=[
@@ -141,7 +145,7 @@ export const Topbar = () => {
     const theme = useThemeHeader();
     const [eventsSuggestion, setEventsSuggestion] = useState<boolean>(false)
     const [sidebar, setSidebar] = useState<boolean>(false)
-
+    const url = usePathname()
     return (
         <>
             <header
@@ -154,8 +158,8 @@ export const Topbar = () => {
                     <nav
                         className="relative w-[84rem] max-w-[95%] mx-auto h-full flex flex-row-reverse items-center justify-between transition-all">
                         <div className="text-black items-center flex flex-row gap-6">
-                            <Link href="">محصولات آرایشی</Link>
-                            <Link href="">محصولات بهداشتی</Link>
+                            <Link className={addClass(Path.BeautyProducts === url ? "text-[#6E6E73] pointer-events-none !cursor-not-allowed" : '')} href={Path.BeautyProducts}>محصولات آرایشی</Link>
+                            <Link className={addClass(Path.CareProducts === url ? "text-[#6E6E73] pointer-events-none !cursor-not-allowed" : '')} href={Path.CareProducts}>محصولات بهداشتی</Link>
                             <Cart>
                                 <CartDropdown data={CartData}/>
                             </Cart>
@@ -259,11 +263,17 @@ export const Topbar = () => {
                         <Sidebar show={sidebar}/>
                     </nav>
                     :
-                    <nav className="relative w-[84rem] max-w-[95%] mx-auto h-full flex flex-row-reverse items-center justify-between">
-                        <div
-                            className="lt:flex text-black items-center ipad:gap-[40px] gap-[30px] hidden">
-                            sub header data
-                        </div>
+                    <nav className="relative w-[84rem] max-w-[95%] mx-auto h-full transition-all flex flex-row-reverse items-center justify-between">
+                        <Cart>
+                            {
+                                url===Path.CareProducts
+                                ?
+                                    <Typography.Text size="md" color="primary" weight="medium">محصولات بهداشتی</Typography.Text>
+                                    :
+                                    <Typography.Text size="md" color="primary" weight="medium">محصولات آرایشی</Typography.Text>
+                            }
+                            <CartDropdown data={CartData}/>
+                        </Cart>
                         <Link prefetch={false} href={'/'} className="lt:mr-[40px] mr-0">
                             <div className='sm:w-[100px] w-[80px] text-black'>
                                  <Image src={AppLogo} alt="logo"/>
